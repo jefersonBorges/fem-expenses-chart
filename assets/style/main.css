@@ -1,1 +1,93 @@
-/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "DM Sans";
+  font-display: swap;
+  src: url(../fonts/DMSans-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-display: swap;
+  src: url(../fonts/DMSans-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-display: swap;
+  src: url(../fonts/DMSans-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  font-display: swap;
+  src: url(../fonts/DMSans-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(27, 66%, 92%);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 90rem;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  width: 25rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  color: hsl(33, 100%, 98%);
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 1rem;
+}
+
+.chart {
+  padding: 1rem;
+  width: 100%;
+  background-color: hsl(33, 100%, 98%);
+  border-radius: 1rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  font-size: 0.63rem;
+  text-align: center;
+}
+.attribution .link {
+  color: hsl(186, 34%, 60%);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,45 @@
+//COLORS
+
+$soft_red: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+$dark_brown: hsl(25, 47%, 15%);
+$medium_brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very_pale_orange: hsl(33, 100%, 98%);
+
+//WIDTHS
+
+$width_mobile: 23.45rem;  //375px
+$width_desktop: 90rem;    //1440px
+
+//HEIGHTS
+
+$height_page: 100vh;
+
+
+//TYPOGRAPHY
+
+//Family
+$ff-primary: 'DM Sans', sans-serif;
+
+//Weights
+
+$fw-regular: normal;
+$fw-bold: bold;
+
+//Sizes
+
+$fs-100: 0.63rem;   //10px
+$fs-200: 1rem;      //16px
+$fs-250: 1.125rem;  //18px
+$fs-300: 1.5rem;    //24px
+$fs-400: 2rem;      //32px
+
+//SPACING
+//Padding, Margin, Gap
+
+$s-100: 0.5rem;
+$s-200: 1rem;
+$s-300: 1.5rem;
+$s-400: 2rem;
+$s-500: 2.5rem;
