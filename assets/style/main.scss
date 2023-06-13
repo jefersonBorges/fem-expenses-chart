@@ -39,8 +39,7 @@ body {
   align-items: center;
 
   gap: $s-200;
-  margin-bottom: $s-500;
-  width: 25rem;
+  margin-bottom: $s-800;
 }
 
 .header {
@@ -48,8 +47,9 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: $s-200;
+  padding: $s-300;
   width: 100%;
+  height: $s-1200;
 
   color: $very_pale_orange;
 
@@ -57,12 +57,162 @@ body {
   border-radius: $s-200;
 }
 
+.title {
+  font-size: $fs-100;
+  font-weight: normal;
+
+  &.big {
+    font-size: $fs-300;
+    font-weight: $fw-bold;
+  }
+}
+
+.paragraph {
+  font-size: $fs-300;
+
+  &.small {
+    font-size: $fs-100;
+  }
+
+  &.medium {
+    font-size: $fs-200;
+  }
+
+  &.big {
+    font-size: $fs-400;
+  }
+
+}
+
+.strong {
+  font-weight: 700;
+
+}
+
+.content {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 100%;
+
+  &.right {
+
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &.left {
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .chart {
-  padding: $s-200;
+
+  padding: $s-300;
   width: 100%;
 
   background-color: $very_pale_orange;
   border-radius: $s-200;
+}
+
+.chart-area {
+
+  .title {
+    color: $dark_brown;
+  }
+}
+
+.chart-elements {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  gap: 1rem;
+  padding-bottom: $s-300;
+  padding-top: $s-300;
+
+
+  .column {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: $s-100;
+
+    .amount {
+
+      visibility: hidden;
+
+      padding: $s-050;
+
+      font-size: $fs-200;
+      font-weight: $fw-bold;
+      color: $very_pale_orange;
+
+      background-color: $dark_brown;
+      border-radius: $s-050;
+    }
+
+    .bar {
+
+      height: 150px; //Auto javascript
+
+      background-color: $soft_red;
+      width: 100%;
+
+      border-radius: $s-100;
+
+      &.current {
+        background-color: $cyan;
+      }
+    }
+
+    .week {
+      font-size: $fs-100;
+      color: $medium_brown;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .amount {
+        visibility: visible;
+      }
+
+      .bar {
+        opacity: 0.8;
+      }
+
+    }
+  }
+}
+
+.chart-statistics {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: $s-300;
+  padding-bottom: $s-100;
+
+  border-top: 1px solid $cream;
+
+  .title,
+  .paragraph.small {
+    color: $medium_brown;
+  }
+
+  .strong {
+    color: $dark_brown;
+  }
 }
 
 .attribution {

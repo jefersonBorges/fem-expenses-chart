@@ -58,26 +58,135 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2.5rem;
-  width: 25rem;
+  margin-bottom: 4rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
+  height: 6rem;
   color: hsl(33, 100%, 98%);
   background-color: hsl(10, 79%, 65%);
   border-radius: 1rem;
 }
 
+.title {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+.title.big {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+}
+.paragraph.small {
+  font-size: 0.75rem;
+}
+.paragraph.medium {
+  font-size: 1rem;
+}
+.paragraph.big {
+  font-size: 2rem;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.content.right {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.content.left {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .chart {
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
   background-color: hsl(33, 100%, 98%);
   border-radius: 1rem;
+}
+
+.chart-area .title {
+  color: hsl(25, 47%, 15%);
+}
+
+.chart-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.chart-elements .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.chart-elements .column .amount {
+  visibility: hidden;
+  padding: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: hsl(33, 100%, 98%);
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 0.25rem;
+}
+.chart-elements .column .bar {
+  height: 150px;
+  background-color: hsl(10, 79%, 65%);
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.chart-elements .column .bar.current {
+  background-color: hsl(186, 34%, 60%);
+}
+.chart-elements .column .week {
+  font-size: 0.75rem;
+  color: hsl(28, 10%, 53%);
+}
+.chart-elements .column:hover {
+  cursor: pointer;
+}
+.chart-elements .column:hover .amount {
+  visibility: visible;
+}
+.chart-elements .column:hover .bar {
+  opacity: 0.8;
+}
+
+.chart-statistics {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid hsl(27, 66%, 92%);
+}
+.chart-statistics .title,
+.chart-statistics .paragraph.small {
+  color: hsl(28, 10%, 53%);
+}
+.chart-statistics .strong {
+  color: hsl(25, 47%, 15%);
 }
 
 .attribution {
@@ -85,7 +194,7 @@ body {
   bottom: 0;
   padding: 1rem;
   width: 100%;
-  font-size: 0.63rem;
+  font-size: 0.75rem;
   text-align: center;
 }
 .attribution .link {
