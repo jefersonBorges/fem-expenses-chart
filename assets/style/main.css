@@ -49,9 +49,14 @@ body {
   align-items: center;
   width: 100%;
   max-width: 90rem;
-  height: 100%;
 }
 
+@media screen and (max-width: 23.4375rem) {
+  .container {
+    width: 100%;
+    max-width: 23.4375rem;
+  }
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -131,11 +136,14 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  width: 100%;
 }
 .chart-elements .column {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -143,9 +151,11 @@ body {
   gap: 0.5rem;
 }
 .chart-elements .column .amount {
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
   visibility: hidden;
   padding: 0.25rem;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: hsl(33, 100%, 98%);
   background-color: hsl(25, 47%, 15%);
@@ -154,7 +164,7 @@ body {
 .chart-elements .column .bar {
   height: 150px;
   background-color: hsl(10, 79%, 65%);
-  width: 100%;
+  width: 2rem;
   border-radius: 0.5rem;
 }
 .chart-elements .column .bar.current {

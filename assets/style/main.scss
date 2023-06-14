@@ -2,17 +2,19 @@
 @import 'variables';
 
 * {
+
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: $height_page;
+  height: $height-page;
   width: 100%;
 
   font-family: $ff-primary;
@@ -21,6 +23,7 @@ body {
 }
 
 .container {
+
   position: relative;
 
   display: flex;
@@ -28,11 +31,20 @@ body {
   align-items: center;
 
   width: 100%;
-  max-width: $width_desktop;
-  height: 100%;
+  max-width: $width-desktop;
+  //height: 100%;
+}
+
+@media screen and (max-width: $width-mobile) {
+
+  .container {
+    width: 100%;
+    max-width: $width-mobile;
+  }
 }
 
 .main {
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +55,7 @@ body {
 }
 
 .header {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,13 +64,14 @@ body {
   width: 100%;
   height: $s-1200;
 
-  color: $very_pale_orange;
+  color: $very-pale-orange;
 
-  background-color: $soft_red;
+  background-color: $soft-red;
   border-radius: $s-200;
 }
 
 .title {
+
   font-size: $fs-100;
   font-weight: normal;
 
@@ -68,6 +82,7 @@ body {
 }
 
 .paragraph {
+
   font-size: $fs-300;
 
   &.small {
@@ -81,12 +96,11 @@ body {
   &.big {
     font-size: $fs-400;
   }
-
 }
 
 .strong {
-  font-weight: 700;
 
+  font-weight: 700;
 }
 
 .content {
@@ -117,14 +131,14 @@ body {
   padding: $s-300;
   width: 100%;
 
-  background-color: $very_pale_orange;
+  background-color: $very-pale-orange;
   border-radius: $s-200;
 }
 
 .chart-area {
 
   .title {
-    color: $dark_brown;
+    color: $dark-brown;
   }
 }
 
@@ -133,13 +147,16 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
 
-  gap: 1rem;
-  padding-bottom: $s-300;
-  padding-top: $s-300;
-
+  gap: $s-100;
+  margin-bottom: $s-300;
+  margin-top: $s-500;
+  width: 100%;
 
   .column {
+
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -150,24 +167,27 @@ body {
 
     .amount {
 
+      position: absolute;
+      bottom: calc(100% + $s-100);
+
       visibility: hidden;
 
       padding: $s-050;
 
-      font-size: $fs-200;
+      font-size: $fs-100;
       font-weight: $fw-bold;
-      color: $very_pale_orange;
+      color: $very-pale-orange;
 
-      background-color: $dark_brown;
+      background-color: $dark-brown;
       border-radius: $s-050;
     }
 
     .bar {
 
-      height: 150px; //Auto javascript
+      height: 150px; //JS
 
-      background-color: $soft_red;
-      width: 100%;
+      background-color: $soft-red;
+      width: 2rem;
 
       border-radius: $s-100;
 
@@ -177,11 +197,13 @@ body {
     }
 
     .week {
+
       font-size: $fs-100;
-      color: $medium_brown;
+      color: $medium-brown;
     }
 
     &:hover {
+
       cursor: pointer;
 
       .amount {
@@ -197,6 +219,7 @@ body {
 }
 
 .chart-statistics {
+
   display: flex;
   flex-direction: column;
 
@@ -207,15 +230,16 @@ body {
 
   .title,
   .paragraph.small {
-    color: $medium_brown;
+    color: $medium-brown;
   }
 
   .strong {
-    color: $dark_brown;
+    color: $dark-brown;
   }
 }
 
 .attribution {
+
   position: absolute;
   bottom: 0;
 
@@ -228,5 +252,4 @@ body {
   .link {
     color: $cyan;
   }
-
 }
