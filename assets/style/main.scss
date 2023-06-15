@@ -32,7 +32,6 @@ body {
 
   width: 100%;
   max-width: $width-desktop;
-  //height: 100%;
 }
 
 @media screen and (max-width: $width-mobile) {
@@ -142,16 +141,17 @@ body {
   }
 }
 
-.chart-elements {
+.chart-plot-area {
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-end;
 
-  gap: $s-100;
-  margin-bottom: $s-300;
+  gap: $s-150;
+  margin-bottom: $s-500;
   margin-top: $s-500;
+  height: 10rem;
   width: 100%;
 
   .column {
@@ -163,9 +163,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    gap: $s-100;
-
-    .amount {
+    .y-axis {
 
       position: absolute;
       bottom: calc(100% + $s-100);
@@ -184,29 +182,32 @@ body {
 
     .bar {
 
-      height: 150px; //JS
-
       background-color: $soft-red;
-      width: 2rem;
-
+      width: $s-400;
       border-radius: $s-100;
-
-      &.current {
-        background-color: $cyan;
-      }
     }
 
-    .week {
+    .x-axis {
+
+      position: absolute;
+      top: calc(100% + $s-100);
 
       font-size: $fs-100;
       color: $medium-brown;
+    }
+
+    &.current {
+
+      .bar {
+        background-color: $cyan;
+      }
     }
 
     &:hover {
 
       cursor: pointer;
 
-      .amount {
+      .y-axis {
         visibility: visible;
       }
 
