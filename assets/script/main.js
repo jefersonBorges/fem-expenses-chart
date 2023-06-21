@@ -28,7 +28,7 @@ const chartGenerator = {
           data => {
 
             const amount = `$${data.amount}`
-            const barHeight = this.calculateBarHeight(chartData.barHeightUnit, data.amount)
+            const barHeight = `${this.calculateBarHeight(chartData.barHeightUnit, data.amount)}px`
             const day = data.day
             
             const newColumn = this.chartElements.column(amount, barHeight, day)
@@ -47,16 +47,12 @@ const chartGenerator = {
     const maxHeight = this.$chartPlotArea.clientHeight
     const maxBarAmount = Math.max(...amountsArr)
 
-    return(
-      Math.round(
-        (maxHeight / maxBarAmount) * this.params.precision
-      ) / this.params.precision
-    )
+    return ( Math.round( (maxHeight / maxBarAmount) * this.params.precision ) / this.params.precision )
   },
 
   calculateBarHeight(barHeightUnit, amount){
     const barHeight = Math.round(barHeightUnit * amount)
-    return `${barHeight}px`
+    return barHeight
   },
 
   chartElements: {
