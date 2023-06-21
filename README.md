@@ -1,23 +1,44 @@
 # Frontend Mentor - Expenses chart component solution
 
+Entusiasmado em compartilhar minha solução para o desafio Expenses Chart Component do Frontend Mentor. Desenvolvi esta aplicação web dinâmica usando HTML, CSS/SASS e JavaScript.
+
+O desafio exigia a criação de um gráfico interativo que visualizasse as despesas dos últimos 7 dias. Os usuários podem passar o mouse sobre as barras para ver os valores exatos gastos a cada dia.
+
+Empreguei técnicas modernas de desenvolvimento web, incluindo manipulação de DOM, programação assíncrona com Fetch API e programação orientada a objetos.
+
+Confira minha solução e o próprio desafio em Frontend Mentor.
+Feedbacks são bem vindos!
+
+Agradecimento aos meus professores @Thiago Medeiros da @Formação Full Stack Javascript e @Rodrigo de Losina Silva da @Alfamidia Educação Profissional
+
+---
+
 I'm thrilled to share my solution for the Expenses Chart Component challenge by Frontend Mentor. I developed this dynamic web application using HTML, CSS/SASS, and JavaScript.
 
-The challenge required creating an interactive chart that visualizes expenses over the last 7 days. Users can hover over the bars to view the exact amounts spent each day. The application has a responsive design and offers a seamless user experience across different devices.
+The challenge required creating an interactive chart that visualizes expenses over the last 7 days. Users can hover over the bars to view the exact amounts spent each day.
 
-I employed modern web development techniques, including DOM manipulation, asynchronous programming with the Fetch API, and object-oriented programming. The codebase is clean, well-structured, and follows best practices to ensure maintainability and scalability.
+I employed modern web development techniques, including DOM manipulation, asynchronous programming with the Fetch API, and object-oriented programming.
 
-Check out my solution and the challenge itself on [Frontend Mentor](link). I welcome any feedback or suggestions for improvement.
+Check out my solution and the challenge itself on Frontend Mentor.
+I welcome any feedback or suggestions for improvement.
 
-@Formação Full Stack Javascript @Thiago Medeiros
+[Frontend Mentor](https://www.frontendmentor.io/solutions/expenses-chart-component-challenge-using-javascript-and-sass-xWQ2IBulH1)
 
-\#FrontendDevelopment
-\#WebDevelopment
-\#JavaScript
-\#HTML
-\#CSS
-\#SASS
+\#frontend
+\#desenvolvimento
+\#webdevelopment
+\#programacao
+\#programming
+\#web
+\#javascript
+\#html
+\#css
+\#sass
 \#DataVisualization
-\#FrontendMentorChallenge
+\#FrontendMentor
+\#CodeChallenge
+
+---
 
 ## Table of contents
 
