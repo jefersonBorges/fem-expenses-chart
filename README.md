@@ -1,6 +1,23 @@
 # Frontend Mentor - Expenses chart component solution
 
-This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt).
+I'm thrilled to share my solution for the Expenses Chart Component challenge by Frontend Mentor. I developed this dynamic web application using HTML, CSS/SASS, and JavaScript.
+
+The challenge required creating an interactive chart that visualizes expenses over the last 7 days. Users can hover over the bars to view the exact amounts spent each day. The application has a responsive design and offers a seamless user experience across different devices.
+
+I employed modern web development techniques, including DOM manipulation, asynchronous programming with the Fetch API, and object-oriented programming. The codebase is clean, well-structured, and follows best practices to ensure maintainability and scalability.
+
+Check out my solution and the challenge itself on [Frontend Mentor](link). I welcome any feedback or suggestions for improvement.
+
+@Formação Full Stack Javascript @Thiago Medeiros
+
+\#FrontendDevelopment
+\#WebDevelopment
+\#JavaScript
+\#HTML
+\#CSS
+\#SASS
+\#DataVisualization
+\#FrontendMentorChallenge
 
 ## Table of contents
 
@@ -9,15 +26,12 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
   - [Screenshot](#screenshot)
     - [Mobile](#mobile)
     - [Desktop](#desktop)
+    - [Desktop active states](#desktop-active-states)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -40,6 +54,9 @@ Users should be able to:
 #### Desktop
 
 ![Desktop Screenshot](./assets/design/screenshot-desktop.jpeg)
+
+#### Desktop active states
+
 ![Desktop Screenshot active states](./assets/design/screenshot-desktop-active-states.jpeg)
 
 ### Links
@@ -53,34 +70,54 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
-- CSS Grid
 - SASS
 - JavaScript
+  - DOM
+  - OOP
+  - Async
+  - ES6 Features
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Using JS Dom to generate the chart elements was very fun!
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+//starts after the page content is loaded
+generateChart(){
+
+    //loads the data.json containing the expenses entry values
+    this.getChartData(this.params.source)
+    .then(
+      response => {
+        
+        const amounts = response.map(element => element.amount);
+
+        //based on the highest amount calculates the unit height for the chart bar
+        const barHeightUnit = this.calculateBarHeightUnit(amounts) 
+
+        return {response, barHeightUnit}
+      }
+    )
+    .then(
+      chartData => {
+
+        chartData.response.forEach(
+          data => {
+
+            const amount = `$${data.amount}`
+            const barHeight = `${this.calculateBarHeight(chartData.barHeightUnit, data.amount)}px`
+            const day = data.day
+
+            //create the chart column for each expense entry value
+            const newColumn = this.chartElements.column(amount, barHeight, day)
+            this.$chartPlotArea.appendChild(newColumn)
+          }
+        )
+      }
+    )
+  },
 ```
-
-
-### Continued development
-
-### Useful resources
 
 ## Author
 
